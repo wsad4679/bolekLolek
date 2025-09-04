@@ -5,5 +5,30 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="bolekLolek.MainWindow"
         Title="bolekLolek">
-    Welcome to Avalonia!
+        <Grid>
+                <TextBlock Text="Wpisz zadanie: "/>
+                <TextBox x:Name="taskTextBox" Width="50" Height="20"/>
+                <ComboBox x:Name="personComboBox" SelectionChanged="PersonComboBox_OnSelectionChanged">
+                        <ComboBoxItem Content="Bolek"/>
+                        <ComboBoxItem Content="Lolek"/>
+                </ComboBox>
+                <Image x:Name="personImage" Width="200" Height="200"/>
+                
+                <RadioButton GroupName="difficultyLevel" x:Name="easyRadioButton" Content="łatwy"/>
+                <RadioButton GroupName="difficultyLevel" x:Name="mediumRadioButton" Content="średni"/>
+                <RadioButton GroupName="difficultyLevel" x:Name="hardRadioButton" Content="trudny"/>
+                
+                <CheckBox x:Name="outsideCheckBox" Content="na dworze"/>
+                <CheckBox x:Name="toolsCheckBox" Content="potrzebne narzędzia"/>
+                <CheckBox x:Name="friendsCheckBox" Content="potrzebna darmowa siła robocza"/>
+                
+                <TextBlock Text="data zadania: "/>
+                <CalendarDatePicker x:Name="dateCalendarDatePicker" Width="200"/>
+                <Button x:Name="addButton" Content="Dodaj zadanie" Click="AddButton_OnClick"/>
+                
+                <ListBox x:Name="taskListBox" SelectionMode="Single"/>
+                
+                <Button x:Name="deleteButton" Content="Usuń zadanie" Click="DeleteButton_OnClick"/>
+                <Button x:Name="summaryButton" Content="Zobacz dzisiejsze zadania" Click="SummaryButton_OnClick"/>
+        </Grid>
 </Window>
