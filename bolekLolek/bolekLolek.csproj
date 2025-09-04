@@ -21,6 +21,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Assets\" />
+      <None Remove="Assets\bolek.webp" />
+      <AvaloniaResource Include="Assets\bolek.webp" />
+      <None Remove="Assets\lolek.webp" />
+      <AvaloniaResource Include="Assets\lolek.webp" />
     </ItemGroup>
 </Project>
